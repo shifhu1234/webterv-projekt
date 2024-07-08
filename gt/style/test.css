@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Signika;
+    src: url(Signika.ttf) format('truetype');
+}
+
+
+#error-msgs {
+    z-index: 999;
+    position: fixed;
+    top: 5vw;
+    left: -130%;
+    transition: left 1s ease-in-out;
+    background-image: url("../img/errorbg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*background-color: #ff000067;*/
+    color: black;
+    padding: 20px;
+    animation: animatee 1000ms ease-out 100ms;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+    font-family: signika;
+    font-weight: bold;
+    border: rgb(102, 18, 18) ridge 5px;
+}
+
+#error-msgs.show {
+    z-index: 999;
+    left: 100px;
+}
+
+.error,
+.error::selection {
+    color: #0F1227;
+    font-family: Signika;
+    z-index: 999;
+}
+
+/*
+#error-msgs.show2 {
+    z-index: 999;
+    background-color: #00ff0080;
+    color: black;
+    padding: 20px;
+    animation: animatee 1000ms ease-out 100ms;
+    opacity: 100%;
+    animation-fill-mode: forwards;
+    font-family: signika;
+    font-weight: bold;
+    border: rgb(18, 102, 18) ridge 5px;
+}
+*/
+
+
+@keyframes animatee {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0%;
+    }
+
+    80% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+
+}

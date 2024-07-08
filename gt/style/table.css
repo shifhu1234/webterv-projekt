@@ -1,0 +1,113 @@
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  table-layout: fixed;
+  /*background: linear-gradient(to bottom, #7c0a0a 0%, #050000 100%);*/
+  background-image: linear-gradient(#F0D2C7, #EDCDBB 70%);
+
+  border: rgba(145, 143, 143, 0.6) solid 2px;
+
+  /* border-radius: 10px; <-- miért nem működik? */
+
+}
+
+
+
+table caption {
+  font-size: 2em;
+  margin: .5em 0 .75em;
+}
+
+table td {
+  font-weight: 500;
+}
+
+table tr {
+  /* background-color: #f8f8f8;*/
+  /*ezt kellett kivenni*/
+  border: 1px solid #ddd;
+  padding: .35em;
+  font-size: 110%;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+  /* border: 1px solid #ccc;*/
+  border: rgba(145, 143, 143, 0.6) solid 1px;
+
+}
+
+table th {
+  font-size: 1em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #0F1227;
+
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+
+  }
+
+
+
+  table td::before {
+
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+body {
+  font-family: Signika;
+  line-height: 1.25;
+}
+
+caption::first-letter {
+  font-size: 130%;
+  /*color: #EF634C;*/
+  /*color: #EF634C;*/
+}
+
+td::selection,
+th::selection {
+  color: #EF634C;
+}
